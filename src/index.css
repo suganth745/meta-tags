@@ -11,12 +11,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-@import 'antd/dist/antd.css';
-@import './Components/Header/index.css';
-@import './Components/Product/index.css';
-
-@import './Containers/Dashboard/index.css';
-@import './Containers/DateFunction/index.css';
-@import './Containers/ProductCatalouge/index.css';
-@import './Containers/ProductView/index.css';
