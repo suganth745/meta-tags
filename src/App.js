@@ -1,21 +1,20 @@
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+
+import Header from './components/Header';
+import Home from './screens/home';
+import ProductDetails from './screens/productDetails';
 import './App.css';
 
-import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
-import ShareProduct from './components/social-share/Products/shareProduct';
-import ProductListing from './components/social-share/Products/ProductListing';
-import HelmetMetaData from "./components/social-share/Helmat"
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-       <HelmetMetaData></HelmetMetaData>
-      <Router>
-          <Routes>
-            <Route exact path="/" element={<ProductListing/>} />
-            <Route exact path="/listproduct" element={<ProductListing/>} />
-            <Route exact path="/product/:id" element={<ShareProduct/>} />
-          </Routes>
-      </Router>
-    </div>
+    <BrowserRouter>
+      <Header />
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route path='/product/:id' component={ProductDetails} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
